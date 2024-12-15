@@ -1,0 +1,31 @@
+@use "components/header.scss";
+@use "components/footer.scss";
+
+*,
+*::after,
+a::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  font-family: Impact, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}

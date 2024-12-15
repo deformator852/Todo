@@ -1,0 +1,14 @@
+@use "../colors.scss" as colors;
+.header {
+  margin-top: 10px;
+  &__menu {
+    display: flex;
+    justify-content: left;
+    a {
+      color: colors.$primary-text;
+    }
+    &-item {
+      margin-right: 30px;
+    }
+  }
+}
