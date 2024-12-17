@@ -1,6 +1,6 @@
 @use "components/header.scss";
 @use "components/footer.scss";
-
+@use "colors.scss" as colors;
 *,
 *::after,
 a::before {
@@ -20,12 +20,22 @@ a {
 
 #root {
   display: flex;
-  flex-direction: column;
   width: 1400px;
+  align-items: center;
+  height: 100vh;
   font-family: Impact, sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
+  background-color: colors.$background-color;
+  font-family: "Roboto";
+  color: colors.$primary-font-color;
+}
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }

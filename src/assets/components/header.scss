@@ -1,14 +1,37 @@
 @use "../colors.scss" as colors;
 .header {
   margin-top: 10px;
+  width: 200px;
   &__menu {
     display: flex;
-    justify-content: left;
+    flex-direction: column;
     a {
-      color: colors.$primary-text;
+      font-size: 24px;
+      width: 200px;
+      height: 90px;
+      color: colors.$primary-font-color;
+      font-family: "Roboto";
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      svg {
+        margin-right: 10px;
+      }
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: #212121;
+      }
     }
     &-item {
-      margin-right: 30px;
+      border: 1px solid colors.$border-color;
+      display: flex;
+      align-items: center;
+      p {
+        width: 50px;
+      }
     }
+  }
+  .current {
+    background-color: #212121;
   }
 }
