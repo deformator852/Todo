@@ -1,12 +1,14 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Task } from "../interfaces/interface";
+import { useActions } from "../hooks/useActions";
 
 export default function AddTask() {
-    const [tasks, setTasks] = useState<Task[]>([]);
     const [addTaskStatus, setAddTaskStatus] = useState(false);
     const [taskName, setTaskName] = useState("");
+    const { addNewTask } = useActions()
+
     function clickAddTask() {
         setAddTaskStatus(!addTaskStatus)
     }
@@ -16,17 +18,12 @@ export default function AddTask() {
             name: taskName,
             completed: false
         };
-        setTasks((prev) => [...prev, newTask]);
+        addNewTask(newTask)
+        setTaskName("");
     }
     return (
         <div className="add-task">
             {addTaskStatus ?
-                // Change useContext to Redux
-                // Change useContext to Redux
-                // Change useContext to Redux
-                // Change useContext to Redux
-                // Change useContext to Redux
-
                 <div className="add-task__field">
                     <textarea onChange={(e) => { setTaskName(e.target.value) }} value={taskName} className="add-task__task-name" name="task-name"></textarea>
                     <div className="add-task__buttons">
